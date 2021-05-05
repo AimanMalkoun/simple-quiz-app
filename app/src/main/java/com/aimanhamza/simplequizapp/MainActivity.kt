@@ -29,7 +29,11 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.addToBackStack(null)
-        fragmentTransaction.replace(R.id.fragment, ResultFragment(score, username)).commit()
+        if(score >= 7){
+            fragmentTransaction.replace(R.id.fragment, ResultFragment(score, username)).commit()
+        }else{
+            fragmentTransaction.replace(R.id.fragment, ResultFragmentFail(score, username)).commit()
+        }
     }
 
     fun goToHome(){

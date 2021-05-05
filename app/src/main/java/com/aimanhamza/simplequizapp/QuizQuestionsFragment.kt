@@ -141,7 +141,7 @@ class QuizQuestionsFragment : Fragment(), View.OnClickListener {
         defaultOptionsView()
 
         if (mCurrentPosition == mQuestionsList!!.size) {
-            btn_submit.text = "FINISH"
+            btn_submit.text = "VALIDER"
         } else {
             btn_submit.text = "SUIVANT"
         }
