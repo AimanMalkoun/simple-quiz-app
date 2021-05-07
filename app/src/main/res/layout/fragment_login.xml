@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -18,11 +18,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:text="@string/app_name"
             android:gravity="center"
+            android:rotation="-11"
+            android:text="@string/app_name"
             android:textColor="@android:color/white"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:translationX="-30sp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_main"
@@ -47,32 +49,36 @@
                     android:gravity="center"
                     android:text="Bonjour"
                     android:textColor="#363A43"
-                    android:textSize="30sp"
+                    android:textSize="70sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_marginTop="16dp"
+                    android:gravity="center"
                     android:text="Entrer votre nom s'il vous plait"
                     android:textColor="#7A8089"
-                    android:textSize="16sp" />
+                    android:textSize="25sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_name"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    app:boxCornerRadiusBottomEnd="20sp"
+                    app:boxCornerRadiusBottomStart="20sp"
+                    app:boxCornerRadiusTopEnd="20sp"
+                    app:boxCornerRadiusTopStart="20sp">
 
                     <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/et_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:imeOptions="actionGo"
                         android:hint="nom"
+                        android:imeOptions="actionGo"
                         android:inputType="textCapWords"
                         android:textColor="#363A43"
                         android:textColorHint="#7A8089" />
@@ -83,10 +89,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:background="@color/black"
+                    android:background="#5A37BC"
                     android:text="Commecer"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:icon="@drawable/play"
+                    app:iconGravity="end"
+                    app:iconSize="20sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

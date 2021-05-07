@@ -6,10 +6,10 @@
     android:background="@drawable/ic_bg"
     tools:context=".QuizQuestionsFragment">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF"
         android:fillViewport="true"
         tools:context=".QuizQuestionActivity">
 
@@ -25,9 +25,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:fontFamily="cursive"
                 android:gravity="center"
-                android:textColor="#363A43"
-                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 tools:text="Quel est le pay de ce drapeau?" />
 
             <ImageView
@@ -36,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:contentDescription="image"
+                android:scaleType="centerCrop"
                 tools:src="@drawable/ic_flag_of_germany" />
 
             <LinearLayout
@@ -55,7 +58,8 @@
                     android:indeterminate="false"
                     android:max="10"
                     android:minHeight="50dp"
-                    android:progress="0" />
+                    android:progress="0"
+                    android:progressBackgroundTint="#F3F1F1" />
 
                 <TextView
                     android:id="@+id/tv_progress"
@@ -63,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:textColorHint="#7A8089"
+                    android:textColorHint="#F4F4F4"
                     android:textSize="14sp"
                     tools:text="0/10" />
             </LinearLayout>
@@ -74,6 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/default_option_border_bg"
+                android:fontFamily="casual"
                 android:gravity="center"
                 android:padding="15dp"
                 android:textColor="#7A8089"
@@ -89,6 +94,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/default_option_border_bg"
+                android:fontFamily="casual"
                 android:gravity="center"
                 android:padding="15dp"
                 android:textColor="#7A8089"
@@ -104,6 +110,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/default_option_border_bg"
+                android:fontFamily="casual"
                 android:gravity="center"
                 android:padding="15dp"
                 android:textColor="#7A8089"
@@ -119,6 +126,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/default_option_border_bg"
+                android:fontFamily="casual"
                 android:gravity="center"
                 android:padding="15dp"
                 android:textColor="#7A8089"
@@ -128,17 +136,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btn_submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
                     android:text="Suivant"
                     android:textColor="@android:color/white"
-                    android:background="@color/colorPrimary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
